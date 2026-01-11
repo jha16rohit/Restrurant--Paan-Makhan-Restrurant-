@@ -12,8 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 0 40px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 /* LOGO */
@@ -21,13 +22,29 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
   font-size: 22px;
   font-weight: 700;
   color: #2b5b3f;
 }
 
-.logo img {
-  height: 45px;
+.brand-sub {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(165, 0, 0);
+  letter-spacing: 2px;
 }
 
 /* NAV LINKS */
@@ -40,13 +57,12 @@
 .nav-links li a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 700;
   transition: 0.3s;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
+.nav-links li a:hover {
   color: #d97b00;
 }
 
@@ -62,34 +78,78 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.3s ease; /* smooth zoom */
+  transition: transform 0.3s ease;
 }
 
 .location-btn:hover {
-  transform: scale(1.08); /* zoom effect */
+  transform: scale(1.08);
 }
 
 .location-icon {
   font-size: 20px;
   color: white;
 }
-.logo-text {
-  display: flex;
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
   flex-direction: column;
-  line-height: 1;
+  cursor: pointer;
+  gap: 6px;
 }
 
-.brand-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2b5b3f;
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #2d1f14;
+  transition: 0.4s;
 }
 
-.brand-sub {
-  position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(165, 0, 0);
-  letter-spacing: 2px;
-  left: 12px;
+/* X animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hide mobile location by default */
+.mobile-location {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 1000px) {
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    background: #fbf3e8;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    transition: 0.4s ease;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-location {
+    display: none;
+  }
+
+  .mobile-location {
+    display: block;
+  }
 }

@@ -1,0 +1,163 @@
+.footer {
+  background: #e8e2d9;
+  padding: 60px 80px 20px;
+  color: #4b3b2a;
+}
+
+/* LAYOUT */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  height: 45px;
+  width: auto;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2b5b3f; /* PAAN & MAKHAN green */
+}
+
+.footer-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(165, 0, 0); /* Restaurant red */
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.social-icons svg {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: #f6efe4;   /* soft cream */
+  color: #3a2a1a;        /* dark brown icon */
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;      /* makes the logo thick */
+  font-weight: 900;    /* bold Facebook “F leads */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+.social-icons svg:hover {
+  background: #ff8c00;
+  color: white;
+}
+
+
+/* LINKS */
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-links p {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* CONTACT */
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #d5cfc5;
+  text-align: left;
+  font-size: 14px;
+}
+.footer-contact svg {
+  color: #ff8c00;   /* premium orange */
+  font-size: 20px;
+}
+.footer-links h3,
+.footer-contact h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 500 !important;
+  margin-bottom: 20px;
+}
+.footer-links p {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-links p:hover {
+  color: #ff8c00;   /* premium orange */
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;   /* ONE by ONE */
+    gap: 40px;
+    text-align: center;
+  }
+
+  .brand-logo {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 50px 40px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;  /* TWO columns */
+    gap: 50px;
+  }
+}
