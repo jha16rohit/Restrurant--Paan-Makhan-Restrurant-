@@ -1,14 +1,25 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { MdLocationOn } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="navbar">
-
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      
       {/* LOGO */}
       <div className="logo">
         <img src={logo} alt="Paan & Makhan" />
@@ -20,10 +31,10 @@ const Navbar = () => {
 
       {/* NAV LINKS */}
       <ul className={`nav-links ${open ? "open" : ""}`}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><Link to="/" onClick={() => setOpen(false)}>Home</Link></li>
+        <li><Link to="/menu" onClick={() => setOpen(false)}>Menu</Link></li>
+        <li><Link to="/about" onClick={() => setOpen(false)}>About</Link></li>
+        <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
 
         {/* Mobile Location Button */}
         <li className="mobile-location">
@@ -40,7 +51,7 @@ const Navbar = () => {
         <span>See Locations</span>
       </button>
 
-      {/* HAMBURGER (RIGHT SIDE) */}
+      {/* HAMBURGER */}
       <div
         className={`hamburger ${open ? "active" : ""}`}
         onClick={() => setOpen(!open)}

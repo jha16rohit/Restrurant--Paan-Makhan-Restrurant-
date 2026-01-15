@@ -1,13 +1,13 @@
 .footer {
   background: #e8e2d9;
-  padding: 60px 80px 20px;
+  padding: 60px 50px 20px;
   color: #4b3b2a;
 }
 
 /* LAYOUT */
 .footer-container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
   gap: 60px;
 }
 
@@ -124,6 +124,60 @@
 .footer-links p:hover {
   color: #ff8c00;   /* premium orange */
 }
+/* FEEDBACK */
+.footer-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-feedback select,
+.footer-feedback textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #f6efe4;
+}
+
+.footer-feedback textarea {
+  min-height: 70px;
+  resize: none;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #2d1f14;   /* white star */
+  transition: 0.2s;
+}
+
+.star.active {
+  color: #ff8c00;  /* yellow when selected */
+}
+
+.feedback-btn {
+  background: #2d1f14;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: transform 0.3s ease;   /* smooth zoom */
+}
+
+.feedback-btn:hover {
+  transform: scale(1.08);   /* grow on hover */
+}
+
+
+
 @media (max-width: 768px) {
   .footer {
     padding: 40px 20px 20px;
@@ -133,6 +187,10 @@
     grid-template-columns: 1fr;   /* ONE by ONE */
     gap: 40px;
     text-align: center;
+  }
+  .footer-1{
+    position: relative;
+    left: -45px;
   }
 
   .brand-logo {
@@ -159,5 +217,26 @@
   .footer-container {
     grid-template-columns: 1fr 1fr;  /* TWO columns */
     gap: 50px;
+  }
+}
+.footer-feedback h3 {
+  font-size: 25px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+}
+@media (min-width: 600px) and (max-width: 1100px) {
+  
+  .footer-feedback {
+    grid-column: 1 / -1;   /* take full row */
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1326px){
+.footer-container {
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+}
+.footer-feedback {
+    grid-column: 1 / -1;   /* take full row */
+    width: 100%;
   }
 }
