@@ -1,0 +1,379 @@
+.signature-header {
+  background: linear-gradient(to bottom, #fbf3e8, #fff);
+  padding: 90px 20px 50px;
+  text-align: center;
+}
+
+.signature-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Top small text: "Our Signature" */
+.signature-top {
+  display: block;
+  font-size: 70px;
+  color: #b45a2a;          /* warm brown/orange like UI */
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  font-family: "Playfair Display", serif;
+}
+
+/* Main heading */
+.signature-inner h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;        /* closer to UI */
+  font-weight: 400;
+  color: #2b1d12;         /* dark brown (not black) */
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+/* Highlighted word
+.signature-inner h2 span {
+  color: #b45a2a;        
+} */
+
+/* Subtitle */
+.signature-inner p {
+    font-family: cursive;
+  font-size: 25px;
+  color: #7a6a5c;         /* soft muted brown */
+  line-height: 1;
+  margin: 0 auto 32px;
+}
+/* ORNAMENT DIVIDER */
+.signature-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.signature-divider .line {
+  width: 180px;        /* increased */
+  height: 1.5px;      /* slightly thicker */
+  background: #cfa88b;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;          /* slightly increased */
+}
+
+.ornament .diamond {
+  width: 16px;        /* increased */
+  height: 16px;
+  border: 1.5px solid #cfa88b;
+  transform: rotate(45deg);
+}
+
+.ornament .star {
+  font-size: 16px;    /* increased */
+  color: #cfa88b;
+}
+
+
+
+/* ===== SIGNATURE DISH CARDS ===== */
+/* ===== SIGNATURE DISH CARD (UPDATED) ===== */
+.signature-card {
+  display: flex;
+  max-width: 80%;              /* slightly smaller */
+  margin: 0 auto 70px;
+  background: linear-gradient(135deg,
+  #e8dfd4 0%,
+  #f4efe9 50%,
+  #ffffff 100%
+);
+
+  border: 1px solid #cfa88b;    /* soft brown border */
+    box-shadow: 0 12px 30px rgba(45, 31, 20, 0.3);
+  overflow: hidden;
+}
+
+/* IMAGE */
+.card-image {
+  width: 48%;                     /* slightly smaller image side */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+  width: 52%;
+  padding: 60px;                  /* reduced padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title slightly smaller */
+.card-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;                /* reduced */
+  color: #2d1f14;
+  margin-bottom: 18px;
+}
+
+/* Description */
+.card-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #6b5a4a;
+  max-width: 460px;
+  font-family: cursive;
+}
+.card-tag{
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff8c00;
+}
+/* Alternate layout */
+.signature-card.reverse {
+  flex-direction: row-reverse;
+}
+/* Ensure all cards have same height */
+.signature-card {
+  min-height: 420px;          /* FIXED consistent height */
+  align-items: stretch;
+}
+
+/* Lock image height */
+.card-image {
+  width: 50%;
+  height: 420px;              /* SAME as card height */
+}
+
+/* Force image to fit nicely */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* crops equally */
+}
+.order-btn {
+  margin-top: 22px;
+  align-self: flex-start;
+  background: #2d1f14;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+.bottom-divider {
+  margin-top: 40px;
+}
+/* ===== CTA SECTION ===== */
+.mithila-cta {
+   
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.mithila-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 500;
+  color: #5a3a22;
+  margin-bottom: 40px;
+}
+
+/* CTA Button */
+.cta-btn {
+  background: linear-gradient(
+    to bottom,
+    #a34d2b,
+    #8b3e22
+  );
+  color: #ffffff;
+  border: none;
+  padding: 18px 48px;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(139, 62, 34, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(139, 62, 34, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mithila-cta h2 {
+    font-size: 30px;
+  }
+
+  .cta-btn {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+}
+/* ================= RESPONSIVE ================= */
+
+/* 📱 MOBILE (small phones) */
+@media (max-width: 480px) {
+  .signature-top {
+    font-size: 36px;
+  }
+
+  .signature-inner h2 {
+    font-size: 44px;
+  }
+
+  .signature-inner p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .signature-card {
+    flex-direction: column;
+    max-width: 95%;
+    min-height: auto;
+  }
+
+  .signature-card.reverse {
+    flex-direction: column;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 240px;
+  }
+
+  .card-content {
+    width: 100%;
+    padding: 30px 24px;
+  }
+
+  .card-content h3 {
+    font-size: 28px;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .order-btn {
+    align-self: center;
+  }
+
+  .signature-divider .line {
+    width: 90px;
+  }
+
+  .mithila-cta h2 {
+    font-size: 26px;
+  }
+}
+
+/* 📱 MINI TABLET (large phones / small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .signature-top {
+    font-size: 48px;
+  }
+
+  .signature-inner h2 {
+    font-size: 60px;
+  }
+
+  .signature-inner p {
+    font-size: 20px;
+  }
+
+  .signature-card {
+    flex-direction: column;
+    max-width: 90%;
+    min-height: auto;
+  }
+
+  .signature-card.reverse {
+    flex-direction: column;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card-content {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .card-content h3 {
+    font-size: 34px;
+  }
+
+  .card-content p {
+    font-size: 18px;
+  }
+
+  .order-btn {
+    align-self: center;
+  }
+}
+
+/* 💊 TABLET (iPad / landscape tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .signature-top {
+    font-size: 58px;
+  }
+
+  .signature-inner h2 {
+    font-size: 72px;
+  }
+
+  .signature-card {
+    max-width: 90%;
+  }
+
+  .card-content {
+    padding: 45px;
+  }
+
+  .card-content h3 {
+    font-size: 38px;
+  }
+
+  .card-content p {
+    font-size: 19px;
+  }
+}
+/* Fix image shrinking between laptop widths */
+@media (min-width: 1025px) and (max-width: 1253px) {
+
+  .signature-card {
+    min-height: auto;     /* release height lock */
+  }
+
+  .card-image {
+    height: auto;         /* let image breathe */
+  }
+
+  .card-image img {
+    height: 100%;
+    min-height: 320px;    /* keeps visual weight */
+    object-fit: cover;
+  }
+}

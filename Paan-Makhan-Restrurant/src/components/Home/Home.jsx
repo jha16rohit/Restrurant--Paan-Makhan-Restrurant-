@@ -1,8 +1,13 @@
 import "./Home.css";
 import heroVideo from "../../assets/hero_video.mp4";
+import SignatureDishes from "../SignatureDishes/SignatureDishes";
+import OurStory from "../OurStory/OurStory";
+import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
+import Testimonials from "../Testimonials/Testimonials";
 
 function Home() {
   return (
+    <>
     <section className="hero">
 
       {/* LEFT CONTENT */}
@@ -48,8 +53,13 @@ function Home() {
   </div>
 </div>
 
-
+    
     </section>
+    <SignatureDishes />
+    <OurStory />
+    <WhyChooseUs />
+    <Testimonials />
+   </> 
   );
 }
 
