@@ -1,0 +1,77 @@
+/* ================= FLOATING BUTTONS ================= */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: -140px;                 /* hidden outside screen */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: right 0.4s ease, opacity 0.4s ease;
+}
+
+/* Visible after scroll */
+.floating-buttons.show {
+  right: 30px;                   /* slide into view */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= BUTTON STYLES ================= */
+
+.btn {
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Order Now */
+.btn.order {
+  background: #ff8c00;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 140, 0, 0.35);
+}
+
+.btn.order:hover {
+  background: #e07b18;
+  transform: translateY(-3px);
+}
+
+/* View Menu */
+.btn.menu {
+  background: #ff8c00;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 140, 0, 0.35);
+}
+
+.btn.menu:hover {
+  background: #e07b18;
+  transform: translateY(-3px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .floating-buttons {
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+    flex-direction: row;
+  }
+
+  .btn {
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+}

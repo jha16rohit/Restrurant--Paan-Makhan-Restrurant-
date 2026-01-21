@@ -4,6 +4,7 @@ import SignatureDishes from "../SignatureDishes/SignatureDishes";
 import OurStory from "../OurStory/OurStory";
 import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import Testimonials from "../Testimonials/Testimonials";
+import DidYouKnow from "../DidYouKnow/DidYouKnow";
 
 function Home() {
   return (
@@ -58,6 +59,7 @@ function Home() {
     <SignatureDishes />
     <OurStory />
     <WhyChooseUs />
+    <DidYouKnow/ >
     <Testimonials />
    </> 
   );

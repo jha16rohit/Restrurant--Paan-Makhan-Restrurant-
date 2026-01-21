@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 /* LAYOUT */
 import Navbar from "./components/NavBar/Navbar";
 import Footer from "./components/Footer/Footer";
+import FloatingButtons from "./components/FloatingButtons/FloatingButtons";
 
 /* PAGES */
 import Home from "./components/Home/Home";
@@ -20,7 +21,7 @@ function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
 
-  // Hide navbar & footer on auth pages
+  // Hide navbar, footer & floating buttons on auth pages
   const isAuthPage =
     location.pathname === "/login" ||
     location.pathname === "/register" ||
@@ -30,7 +31,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // adjust timing if needed
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -58,6 +59,9 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
+
+      {/* FLOATING BUTTONS (GLOBAL) */}
+      {!isAuthPage && <FloatingButtons />}
 
       {!isAuthPage && <Footer />}
     </>
