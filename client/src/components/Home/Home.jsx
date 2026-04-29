@@ -13,7 +13,7 @@ function Home() {
         {/* LEFT CONTENT */}
         <div className="hero-left">
           <div className="welcome-pill">
-            <h2>🍽️ Welcome to Paan & Makhan</h2>
+            <h2>Welcome to Paan & Makhan</h2>
           </div>
           <div className="hero-title">
             <h1>

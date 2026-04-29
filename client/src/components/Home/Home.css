@@ -49,15 +49,15 @@
   font-family: "Passions Conflict", cursive;
   font-weight: 100;
   margin-left: 60px;
-
   text-shadow: 1px 1px 0 #f6d1a3, 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero-title p {
+.hero-left p {
   margin: 20px 0 28px;
   font-size: 17px;
   line-height: 1.6;
   color: #5b4a3a;
+  font-family: cursive;
 }
 
 /* BUTTONS */

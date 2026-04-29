@@ -1,7 +1,37 @@
 .didyouknow {
+  position: relative;
   background: #efe6d9;
-  padding: 80px 6%;
+  margin-top: 140px;
+  margin-bottom: 100px;
+  padding: 100px 80px;
+  z-index: 1;
   font-family: "Pacifico", "Brush Script MT", cursive;
+}
+
+/* Top fade */
+.didyouknow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Bottom fade */
+.didyouknow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, #ffffff, transparent);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .didyouknow-container {
