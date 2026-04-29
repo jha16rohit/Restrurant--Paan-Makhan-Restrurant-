@@ -23,13 +23,35 @@
 }
 
 .welcome-pill {
-  background: #fff3e0;
+  /* background: #fff3e0; */
   padding: 6px 16px;
   border-radius: 30px;
   color: #ff8c00;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 16px;
+}
+
+.welcome-pill h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-pill h2 svg {
+  color: #ff8c00;
+  font-size: 20px;
+}
+
+.brandname {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2b5b3f;
+  font-family: "Uncial Antiqua", cursive;
+}
+
+.brandsymbol {
+  font-family: "Playfair Display", serif;
 }
 
 .hero-title {

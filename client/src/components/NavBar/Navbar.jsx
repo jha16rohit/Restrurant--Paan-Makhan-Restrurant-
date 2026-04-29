@@ -23,7 +23,9 @@ const Navbar = () => {
       <div className="logo">
         <img src={logo} alt="Paan & Makhan" />
         <div className="logo-text">
-          <span className="brand-name">PAAN & MAKHAN</span>
+          <span className="brand-name">
+            PAAN <span className="symbol">&</span> MAKHAN
+          </span>
           <span className="brand-sub">Restaurant</span>
         </div>
       </div>

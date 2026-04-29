@@ -2,6 +2,7 @@
   background: #efe6d9;
   padding: 60px 50px 20px;
   color: #4b3b2a;
+  border-radius: 60px 60px 0 0;
 }
 
 /* LAYOUT */
@@ -32,14 +33,21 @@
 .footer-title {
   font-size: 26px;
   font-weight: 700;
-  color: #2b5b3f; /* PAAN & MAKHAN green */
+  color: #2b5b3f;
+  font-family: "Uncial Antiqua", cursive;
+}
+
+.symbol {
+  font-family: "Playfair Display", serif;
 }
 
 .footer-subtitle {
   font-size: 16px;
+  padding-left: 5px;
   font-weight: 700;
-  color: rgb(165, 0, 0); /* Restaurant red */
-  letter-spacing: 2px;
+  color: rgb(165, 0, 0);
+  font-family: "Limelight", sans-serif;
+  letter-spacing: 1px;
 }
 
 .footer-brand p {
@@ -58,12 +66,12 @@
   width: 44px;
   height: 44px;
   padding: 10px;
-  background: #f6efe4;   /* soft cream */
-  color: #3a2a1a;        /* dark brown icon */
+  background: #f6efe4; /* soft cream */
+  color: #3a2a1a; /* dark brown icon */
   border-radius: 50%;
   cursor: pointer;
-  font-size: 22px;      /* makes the logo thick */
-  font-weight: 900;    /* bold Facebook “F leads */
+  font-size: 22px; /* makes the logo thick */
+  font-weight: 900; /* bold Facebook “F leads */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +82,6 @@
   background: #ff8c00;
   color: white;
 }
-
 
 /* LINKS */
 .footer-links h3,
@@ -105,7 +112,7 @@
   font-size: 14px;
 }
 .footer-contact svg {
-  color: #ff8c00;   /* premium orange */
+  color: #ff8c00; /* premium orange */
   font-size: 20px;
 }
 .footer-links h3,
@@ -122,7 +129,7 @@
 }
 
 .footer-links p:hover {
-  color: #ff8c00;   /* premium orange */
+  color: #ff8c00; /* premium orange */
 }
 /* FEEDBACK */
 .footer-feedback {
@@ -153,12 +160,12 @@
 .star {
   font-size: 24px;
   cursor: pointer;
-  color: #2d1f14;   /* white star */
+  color: #2d1f14; /* white star */
   transition: 0.2s;
 }
 
 .star.active {
-  color: #ff8c00;  /* yellow when selected */
+  color: #ff8c00; /* yellow when selected */
 }
 
 .feedback-btn {
@@ -169,14 +176,12 @@
   border-radius: 20px;
   cursor: pointer;
   margin-top: 5px;
-  transition: transform 0.3s ease;   /* smooth zoom */
+  transition: transform 0.3s ease; /* smooth zoom */
 }
 
 .feedback-btn:hover {
-  transform: scale(1.08);   /* grow on hover */
+  transform: scale(1.08); /* grow on hover */
 }
-
-
 
 @media (max-width: 768px) {
   .footer {
@@ -184,11 +189,11 @@
   }
 
   .footer-container {
-    grid-template-columns: 1fr;   /* ONE by ONE */
+    grid-template-columns: 1fr; /* ONE by ONE */
     gap: 40px;
     text-align: center;
   }
-  .footer-1{
+  .footer-1 {
     position: relative;
     left: -45px;
   }
@@ -215,7 +220,7 @@
   }
 
   .footer-container {
-    grid-template-columns: 1fr 1fr;  /* TWO columns */
+    grid-template-columns: 1fr 1fr; /* TWO columns */
     gap: 50px;
   }
 }
@@ -225,18 +230,17 @@
   font-weight: 500;
 }
 @media (min-width: 600px) and (max-width: 1100px) {
-  
   .footer-feedback {
-    grid-column: 1 / -1;   /* take full row */
+    grid-column: 1 / -1; /* take full row */
     width: 100%;
   }
 }
-@media (min-width: 1025px) and (max-width: 1326px){
-.footer-container {
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-}
-.footer-feedback {
-    grid-column: 1 / -1;   /* take full row */
+@media (min-width: 1025px) and (max-width: 1326px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+  .footer-feedback {
+    grid-column: 1 / -1; /* take full row */
     width: 100%;
   }
 }

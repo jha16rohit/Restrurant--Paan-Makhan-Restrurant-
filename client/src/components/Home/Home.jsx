@@ -6,6 +6,9 @@ import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import Testimonials from "../Testimonials/Testimonials";
 import DidYouKnow from "../DidYouKnow/DidYouKnow";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+
 function Home() {
   return (
     <>
@@ -13,7 +16,13 @@ function Home() {
         {/* LEFT CONTENT */}
         <div className="hero-left">
           <div className="welcome-pill">
-            <h2>Welcome to Paan & Makhan</h2>
+            <h2>
+              <FontAwesomeIcon icon={faUtensils} />
+              Welcome to{" "}
+              <span className="brandname">
+                PAAN <span className="brandsymbol">&</span> MAKHAN
+              </span>
+            </h2>
           </div>
           <div className="hero-title">
             <h1>

@@ -1,6 +1,12 @@
 import "./Footer.css";
 import logo from "../../assets/logo.png";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaStar } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaStar,
+} from "react-icons/fa";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { useState } from "react";
 
@@ -12,19 +18,21 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-
         {/* BRAND */}
         <div className="footer-brand">
           <div className="brand-logo">
             <img src={logo} alt="Paan & Makhan" className="footer-logo" />
             <div className="footer-text">
-              <span className="footer-title">PAAN & MAKHAN</span>
+              <span className="footer-title">
+                PAAN <span className="symbol">&</span> MAKHAN
+              </span>
               <span className="footer-subtitle footer-1">RESTAURANT</span>
             </div>
           </div>
 
           <p>
-            Authentic Maithili & Indian flavors, crafted with tradition and fresh ingredients.
+            Authentic Maithili & Indian flavors, crafted with tradition and
+            fresh ingredients.
           </p>
 
           <div className="social-icons">
@@ -57,9 +65,15 @@ const Footer = () => {
         {/* CONTACT */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p><MdLocationOn /> 123 Gourmet Street, Food City</p>
-          <p><MdPhone /> +1 (555) 123-4567</p>
-          <p><MdEmail /> hello@paanmakhan.com</p>
+          <p>
+            <MdLocationOn /> 123 Gourmet Street, Food City
+          </p>
+          <p>
+            <MdPhone /> +1 (555) 123-4567
+          </p>
+          <p>
+            <MdEmail /> hello@paanmakhan.com
+          </p>
         </div>
 
         {/* ⭐ FEEDBACK SECTION */}
@@ -76,7 +90,7 @@ const Footer = () => {
           </select>
 
           <div className="star-rating">
-            {[1,2,3,4,5].map((num) => (
+            {[1, 2, 3, 4, 5].map((num) => (
               <FaStar
                 key={num}
                 className={num <= rating ? "star active" : "star"}
@@ -93,7 +107,6 @@ const Footer = () => {
 
           <button className="feedback-btn">SUBMIT</button>
         </div>
-
       </div>
 
       <div className="footer-bottom">
