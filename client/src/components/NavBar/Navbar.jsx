@@ -19,27 +19,42 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      
       {/* LOGO */}
       <div className="logo">
         <img src={logo} alt="Paan & Makhan" />
         <div className="logo-text">
           <span className="brand-name">PAAN & MAKHAN</span>
-          <span className="brand-sub">RESTAURANT</span>
+          <span className="brand-sub">Restaurant</span>
         </div>
       </div>
 
       {/* NAV LINKS */}
       <ul className={`nav-links ${open ? "open" : ""}`}>
-        <li><Link to="/" onClick={() => setOpen(false)}>Home</Link></li>
-        <li><Link to="/menu" onClick={() => setOpen(false)}>Menu</Link></li>
-        <li><Link to="/about" onClick={() => setOpen(false)}>About</Link></li>
-        <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
         <li>
-  <Link to="/accounts" onClick={() => setOpen(false)}>
-    Accounts
-  </Link>
-</li>
+          <Link to="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/menu" onClick={() => setOpen(false)}>
+            Menu
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" onClick={() => setOpen(false)}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" onClick={() => setOpen(false)}>
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link to="/accounts" onClick={() => setOpen(false)}>
+            Accounts
+          </Link>
+        </li>
 
         {/* Mobile Location Button */}
         <li className="mobile-location">
@@ -48,7 +63,6 @@ const Navbar = () => {
             <span>See Locations</span>
           </button>
         </li>
-        
       </ul>
 
       {/* Desktop Location Button */}
@@ -66,7 +80,6 @@ const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-
     </nav>
   );
 };

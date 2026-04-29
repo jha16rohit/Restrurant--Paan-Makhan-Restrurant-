@@ -1,5 +1,5 @@
 .why-choose {
-  background: #fbf7f2;
+  background: #ffffff;
   padding: 90px 60px;
   text-align: center;
 }
@@ -33,10 +33,10 @@
   font-size: 20px;
   line-height: 1.7;
   color: #6b5a4a;
-  max-width: 1000px;    
-  white-space: nowrap;    
+  max-width: 1000px;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .why-cards {
