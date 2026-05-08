@@ -1,7 +1,11 @@
 import "./MenuHero.css";
 import heroImage from "../../assets/food_2.png";
 
+import { useNavigate } from "react-router-dom";
+
 const MenuHero = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       className="menu-hero"
@@ -13,22 +17,22 @@ const MenuHero = () => {
             AUTHENTIC MAITHILI & INDIAN CUISINE
           </span>
 
-          <h1 className="menu-hero-title">
-            Mithila's Kitchen
-          </h1>
+          <h1 className="menu-hero-title">Mithila's Kitchen</h1>
 
           <p className="menu-hero-subtitle">
-            Where heritage recipes meet modern elegance.
-            Experience the soul of tradition in every bite.
+            Where heritage recipes meet modern elegance. Experience the soul of
+            tradition in every bite.
           </p>
 
           <div className="menu-hero-actions">
-            <button className="hero-btn primary">
+            <button
+              className="hero-btn primary"
+              onClick={() => navigate("/menuitems")}
+            >
               Explore Menu
             </button>
-            <button className="hero-btn secondary">
-              Reserve a Table
-            </button>
+
+            <button className="hero-btn secondary">Reserve a Table</button>
           </div>
         </div>
       </div>

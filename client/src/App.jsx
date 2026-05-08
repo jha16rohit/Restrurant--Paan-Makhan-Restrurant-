@@ -11,6 +11,7 @@ import FloatingButtons from "./components/FloatingButtons/FloatingButtons";
 /* PAGES */
 import Home from "./components/Home/Home";
 import Menu from "./components/Menu/Menu";
+import MenuItems from "./components/MenuItems/MenuItems";
 import Preloader from "./components/Preloader/Preloader";
 
 /* AUTH */
@@ -49,6 +50,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/menuitems" element={<MenuItems />} />
 
           {/* AUTH ROUTES */}
           <Route path="/login" element={<Login />} />
