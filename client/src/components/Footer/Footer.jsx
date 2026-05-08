@@ -26,7 +26,7 @@ const Footer = () => {
               <span className="footer-title">
                 PAAN <span className="symbol">&</span> MAKHAN
               </span>
-              <span className="footer-subtitle footer-1">RESTAURANT</span>
+              <span className="footer-subtitle footer-1">Restaurant</span>
             </div>
           </div>
 
@@ -110,7 +110,13 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        © 2024 PAAN & MAKHAN Restaurant. All rights reserved.
+        <div className="footer-bottom-track">
+          <span>
+            © 2026 PAAN & MAKHAN Restaurant • Crafted with tradition & elegance
+          </span>
+
+          <span>Authentic Maithili Cuisine • Traditional Indian Flavours</span>
+        </div>
       </div>
     </footer>
   );
